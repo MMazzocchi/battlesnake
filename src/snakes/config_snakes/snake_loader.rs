@@ -26,6 +26,7 @@ struct SnakeStruct {
   pub color: String,
   pub head: String,
   pub tail: String,
+  pub author: String,
   pub strategy: StrategyStruct
 }
 
@@ -71,6 +72,7 @@ pub fn load_snake(entry: Result<DirEntry, IoError>) -> Result<Snake, SnakeLoadEr
       color: snake_struct.color,
       head: snake_struct.head,
       tail: snake_struct.tail,
+      author: snake_struct.author,
       strategy: strategy
     });
 }

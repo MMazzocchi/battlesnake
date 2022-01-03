@@ -20,6 +20,7 @@ pub async fn root_handler(data: Data::<AppState>, request: HttpRequest) -> impl 
   let mut color = "#000000".to_owned();
   let mut head = "default".to_owned();
   let mut tail = "default".to_owned();
+  let mut author = "no one".to_owned();
 
   match data.snake_manager.lock() {
     Ok(snake_mgr) => {
@@ -30,6 +31,7 @@ pub async fn root_handler(data: Data::<AppState>, request: HttpRequest) -> impl 
           color = snake.get_color().to_owned();
           head = snake.get_head().to_owned();
           tail = snake.get_tail().to_owned();
+          author = snake.get_author().to_owned();
         }
         None => {
           warn!("No snake was found!");
@@ -45,7 +47,7 @@ pub async fn root_handler(data: Data::<AppState>, request: HttpRequest) -> impl 
 
   let data = object!{
     "apiversion" => "1",
-    "author" => "Max Mazzocchi <maxwell.mazzocchi@gmail.com>",
+    "author" => author,
     "color" => color,
     "head" => head,
     "tail" => tail,

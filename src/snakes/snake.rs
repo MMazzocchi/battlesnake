@@ -12,7 +12,8 @@ pub struct Snake {
   pub strategy: Strategy,
   pub color: String,
   pub head: String,
-  pub tail: String
+  pub tail: String,
+  pub author: String
 }
 
 impl Snake {
@@ -26,6 +27,10 @@ impl Snake {
 
   pub fn get_tail(&self) -> &String {
     return &self.tail;
+  }
+
+  pub fn get_author(&self) -> &String {
+    return &self.author;
   }
 
   pub fn make_move(&self, game: &Game, you: &Battlesnake) -> Direction {

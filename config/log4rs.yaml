@@ -1,0 +1,19 @@
+appenders:
+  stdout:
+    kind: console
+
+  debuglog:
+    kind: file
+    path: log/debug.log
+
+root:
+  level: info
+  appenders:
+    - stdout
+
+loggers:
+  battlesnake::snakes:
+    level: debug
+    appenders:
+      - debuglog
+    additive: false

@@ -1,0 +1,10 @@
+name: example
+host: 0.0.0.0
+
+color: "#000000"
+head: default
+tail: default
+
+strategy:
+  rules:
+    - name: DontDie

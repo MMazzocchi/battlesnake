@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  battlesnake:
+    build: .
+    ports:
+      - 10000:10000
+    volumes:
+      - ./config:/battlesnake/config
+      - ./log:/battlesnake/log

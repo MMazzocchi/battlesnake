@@ -1,3 +1,6 @@
 .dockerignore
 target/**
 **/*.swp
+log/**
+contrib/**
+README.md

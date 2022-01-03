@@ -24,7 +24,7 @@ impl Strategy {
     }
   }
 
-  pub fn set_rules(&mut self, rules: Vec::<Box<dyn Rule>>) {
+  pub fn _set_rules(&mut self, rules: Vec::<Box<dyn Rule>>) {
     self.rules = rules;
   }
 

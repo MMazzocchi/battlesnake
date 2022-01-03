@@ -25,7 +25,6 @@ use handlers::{
 };
 
 use game::game_manager::GameManager;
-// use snakes::genetic_snakes::snake_manager::GeneticSnakeManager;
 use snakes::config_snakes::snake_manager::ConfigSnakeManager;
 use app_state::AppState;
 
